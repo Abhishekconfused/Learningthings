@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Interface</title>
+    <link rel="stylesheet" href="w3.css">
+</head>
+<body>
+    <div class="container">
+        <div class="recent-chats">
+            <div class="recent-chat">
+                <img src="https://api.dicebear.com/5.x/avataaars/svg?seed=JohnDoe" alt="John Doe profile picture">
+                <div>
+                    <h3>John Doe</h3>
+                    <p>Hey, how are you?</p>
+                </div>
+            </div>
+            <!-- Add more recent chats here -->
+        </div>
+        <div class="chat-area">
+            <div class="chat-header">
+                <img src="https://api.dicebear.com/5.x/avataaars/svg?seed=JohnDoe" alt="John Doe profile picture">
+                <div>
+                    <h2>John Doe</h2>
+                    <p>Online</p>
+                </div>
+            </div>
+            <div class="chat-content">
+                <div class="message incoming">
+                    <div class="bubble">
+                        <span class="message-text">Hi, there!</span>
+                    </div>
+                </div>
+                <div class="reel">
+                    <video width="320" height="240" controls>
+                        <source src="reel1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="message outgoing">
+                    <div class="bubble">
+                        <span class="message-text">Wow, that's cool!</span>
+                    </div>
+                </div>
+            </div>
+            <form class="message-form">
+                <input type="text" class="message-input" placeholder="Type a message...">
+                <button type="submit" class="send-button">Send</button>
+            </form>
+        </div>
+    </div>
+    <script src="w3.js"></script>
+</body>
+</html>

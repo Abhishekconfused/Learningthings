@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* Add some basic styling */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      
+      #tweets {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+      
+      #tweet-box {
+        background-color: #f1f1f1;
+        border-top: 1px solid #ddd;
+        bottom: 0;
+        left: 0;
+        padding: 10px;
+        position: fixed;
+        width: 100%;
+      }
+      
+      #tweet-box textarea {
+        width: 100%;
+      }
+      
+      /* Make the app look beautiful */
+      #tweets li {
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+      }
+      
+      #tweets li:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+      
+      #tweets li .text {
+        font-size: 1.2em;
+        margin-bottom: 5px;
+      }
+      
+      #tweets li .name {
+        color: #0095ff;
+        font-size: 1.1em;
+        font-weight: bold;
+        margin-right: 10px;
+      }
+      
+      #tweets li .handle {
+        color: #666;
+        font-size: 0.9em;
+      }
+      
+      /* Add some hover effects */
+      #tweets li:hover {
+        background-color: #f5f5f5;
+      }
+      
+      #tweet-box:focus-within {
+        box-shadow: 0 0 2px 1px #0095ff;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="tweets">
+      <li>
+        <span class="name">John Doe</span>
+        <span class="handle">@johndoe</span>
+        <span class="text">This is a sample tweet. You can replace it with your own tweet.</span>
+      </li>
+    </ul>
+    
+    <div id="tweet-box">
+      <textarea placeholder="What's happening?"></textarea>
+    </div>
+    
+    <script>
+      // Add tweet functionality
+      const tweetBox = document.querySelector('#tweet-box textarea');
+      const tweets = document.querySelector('#tweets');
+      
+      // Add a new tweet when the user presses Enter
+      tweetBox.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+          event.preventDefault();
+          
+          const tweetText = tweetBox.value.trim();
+          if (tweetText.length > 0) {
+            const newTweet = document.createElement('li');
+            newTweet.innerHTML = `
+              <span class="name">Your Name</span>
+              <span class="handle">@yourhandle</span>
+              <span class="text">${tweetText}</span>
+            `;
+            
+            tweets.appendChild(newTweet);
+            tweetBox.value = '';
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
