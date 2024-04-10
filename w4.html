@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Interface</title>
+    <link rel="stylesheet" href="w4.css">
+    <style>
+        /* Add your CSS code here */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="new-chat-button-container">
+            <button class="new-chat-button">+</button>
+        </div>
+        <div class="recent-chats">
+            <div class="new-chat-form">
+                <input type="text" class="new-chat-input" placeholder="Enter a name for the new chat">
+                <button type="submit" class="new-chat-form-submit">Create</button>
+            </div>
+            <div class="recent-chat">
+                <img src="https://api.dicebear.com/5.x/avataaars/svg?seed=JohnDoe" alt="John Doe profile picture">
+                <div>
+                    <h3>John Doe</h3>
+                    <p>Hey, how are you?</p>
+                </div>
+            </div>
+            <!-- Add more recent chats here -->
+        </div>
+        <div class="chat-area">
+            <div class="chat-header">
+                <img src="https://api.dicebear.com/5.x/avataaars/svg?seed=JohnDoe" alt="John Doe profile picture">
+                <div>
+                    <h2>John Doe</h2>
+                    <p>Online</p>
+                </div>
+            </div>
+            <div class="chat-content">
+                <div class="message incoming">
+                    <div class="bubble">
+                        <span class="message-text">Hi, there!</span>
+                    </div>
+                </div>
+                <div class="reel">
+                    <video width="180" height="240" controls>
+                        <source src="C:\Users\laksh\OneDrive\Desktop\Trips\Chitrakoot'24.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <button class="like-button">Like</button>
+                    <button class="new-reel-button">New Reel</button>
+                    <div class="like-count">0</div>
+                    <div class="like-heart-container">
+                        <div class="like-heart"></div>
+                    </div>
+                </div>
+                <div class="message outgoing">
+                    <div class="bubble">
+                        <span class="message-text">Wow, that's cool!</span>
+                    </div>
+                </div>
+            </div>
+            <form class="message-form">
+                <input type="text" class="message-input" placeholder="Type a message...">
+                <button type="submit" class="send-button">Send</button>
+            </form>
+        </div>
+    </div>
+    <script src="w4.js"></script>
+    <script>
+        // Add your JavaScript code here
+    </script>
+</body>
+</html>
